@@ -1,0 +1,11 @@
+name: 'OS2Web Hjemmeside'
+type: module
+description: 'Main module that brings hjemmeside general configuration.'
+core: 8.x
+package: 'os2web'
+dependencies:
+  - ckeditor
+  - easy_breadcrumbs
+  - extlink
+  - filter
+  - pathauto

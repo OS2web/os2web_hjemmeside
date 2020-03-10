@@ -1,0 +1,13 @@
+{
+    "name": "os2web/os2web_hjemmeside",
+    "type": "drupal-module",
+    "description": "Main module that brings hjemmeside general configuration.",
+    "keywords": [
+    ],
+    "require": {
+        "drupal/core": "*",
+        "os2web/os2web": "8.x-dev"
+    },
+    "license": "EUPL-1.2",
+    "minimum-stability": "dev"
+}
