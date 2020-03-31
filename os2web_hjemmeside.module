@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Os2web Hjemmeside module.
+ */
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function os2web_hjemmeside_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['#attached']['library'][] = 'os2web_hjemmeside/chosen';
+}

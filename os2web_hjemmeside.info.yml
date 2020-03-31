@@ -9,3 +9,4 @@ dependencies:
   - extlink
   - filter
   - pathauto
+  - chosen
