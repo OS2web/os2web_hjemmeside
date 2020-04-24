@@ -2,7 +2,7 @@ enabled_entity_types: {  }
 verbose: false
 separator: '-'
 case: true
-max_length: null
+max_length: 255
 max_component_length: null
 update_action: 1
 transliterate: true
@@ -40,6 +40,6 @@ punctuation:
   question_mark: 0
   less_than: 0
   greater_than: 0
-  slash: 0
+  slash: 2
   back_slash: 0
 langcode: da

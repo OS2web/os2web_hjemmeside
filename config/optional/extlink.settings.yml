@@ -1,4 +1,4 @@
-extlink_target: true
+extlink_target: false
 extlink_target_no_override: false
 extlink_nofollow: false
 extlink_follow_no_override: false

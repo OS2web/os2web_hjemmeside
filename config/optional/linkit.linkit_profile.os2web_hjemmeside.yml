@@ -1,0 +1,31 @@
+langcode: da
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: os2web_hjemmeside
+label: 'OS2Web Hjemmeside'
+description: ''
+matchers:
+  437f7e39-cef5-494d-b1bd-a889329f3a0b:
+    uuid: 437f7e39-cef5-494d-b1bd-a889329f3a0b
+    id: 'entity:node'
+    weight: 0
+    settings:
+      include_unpublished: false
+      metadata: ''
+      bundles: {  }
+      group_by_bundle: false
+      substitution_type: canonical
+      limit: 100
+  1d416165-27d1-48e5-9cea-eb3db45ffcea:
+    uuid: 1d416165-27d1-48e5-9cea-eb3db45ffcea
+    id: 'entity:taxonomy_term'
+    weight: 0
+    settings:
+      metadata: ''
+      bundles: {  }
+      group_by_bundle: false
+      substitution_type: canonical
+      limit: 100
