@@ -6,7 +6,7 @@
     ],
     "require": {
         "drupal/core": "*",
-        "os2web/os2web": "8.x-dev"
+        "os2web/os2web": "develop-dev"
     },
     "license": "EUPL-1.2",
     "minimum-stability": "dev"
