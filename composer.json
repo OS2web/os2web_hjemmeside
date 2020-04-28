@@ -5,8 +5,7 @@
     "keywords": [
     ],
     "require": {
-        "drupal/core": "*",
-        "os2web/os2web": "develop-dev"
+        "drupal/core": "*"
     },
     "license": "EUPL-1.2",
     "minimum-stability": "dev"
