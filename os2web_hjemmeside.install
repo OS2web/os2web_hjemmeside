@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Install, uninstall and update hooks for os2web_hjemmeside module.
+ */
+
+use Symfony\Component\Yaml\Yaml;
+
+/**
+ * Reads in new configuration.
+ *
+ * @param string $config_name
+ *   Configuration name.
+ */
+function os2web_hjemmeside_read_in_new_config($config_name) {
+  $path = drupal_get_path('module', 'os2web_hjemmeside');
+  /** @var \Drupal\Core\Config\StorageInterface $active_storage */
+  $active_storage = \Drupal::service('config.storage');
+  $active_storage->write($config_name, Yaml::parse(file_get_contents($path . '/config/optional/' . $config_name . '.yml')));
+}
+
+/**
+ * Implements hook_install.
+ */
+function os2web_hjemmeside_install() {
+  // Update admin/content view.
+  Drupal::configFactory()->getEditable('views.view.content')->delete();
+  os2web_hjemmeside_read_in_new_config('views.view.content');
+}
