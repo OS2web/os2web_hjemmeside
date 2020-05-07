@@ -33,6 +33,7 @@ settings:
           items:
             - Blockquote
             - DrupalImage
+            - Iframe
         -
           name: Værktøjer
           items:
