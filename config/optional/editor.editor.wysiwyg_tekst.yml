@@ -14,10 +14,8 @@ settings:
         -
           name: Formatering
           items:
-            - Format
             - Bold
             - Italic
-            - Styles
         -
           name: Links
           items:
@@ -33,6 +31,9 @@ settings:
           items:
             - Blockquote
             - DrupalImage
+        -
+          name: Embed
+          items:
             - Iframe
         -
           name: Værktøjer

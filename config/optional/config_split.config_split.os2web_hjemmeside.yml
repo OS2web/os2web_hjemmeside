@@ -1,0 +1,27 @@
+langcode: da
+status: true
+dependencies: {  }
+id: os2web_hjemmeside
+label: 'OS2Web Hjemmeside'
+description: ''
+folder: modules/contrib/os2web_hjemmeside/config/optional
+module: {  }
+theme: {  }
+blacklist:
+  - chosen.settings
+  - easy_breadcrumb.settings
+  - editor.editor.wysiwyg_tekst
+  - eu_cookie_compliance.settings
+  - extlink.settings
+  - filter.format.plain_text
+  - filter.format.wysiwyg_tekst
+  - filter.settings
+  - pathauto.settings
+  - views.view.content
+  - 'os2web_hjemmeside*'
+  - '*os2web_hjemmeside'
+  - '*os2web_hjemmeside*'
+graylist: {  }
+graylist_dependents: false
+graylist_skip_equal: false
+weight: 0
