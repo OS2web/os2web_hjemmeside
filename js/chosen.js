@@ -3,7 +3,7 @@
  * Attaches behaviors for the adjust Chosen module.
  */
 
-(function($, Drupal, drupalSettings) {
+(function ($, Drupal, drupalSettings) {
   'use strict';
 
   Drupal.behaviors.os2webHjemmesideChosen = {
