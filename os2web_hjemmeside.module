@@ -20,5 +20,30 @@ function os2web_hjemmeside_form_node_form_alter(&$form, FormStateInterface $form
 function os2web_hjemmeside_form_editor_link_dialog_alter(&$form, FormStateInterface $form_state, $form_id) {
   if (!empty($form['advanced'])) {
     $form['advanced']['#open'] = TRUE;
+
+    // Adding ability to use link for email addresses.
+    if (isset($form_state->getUserInput()['editor_object'])) {
+      $input = $form_state->getUserInput()['editor_object'];
+      $form_state->set('link_element', $input);
+      $form_state->setCached(TRUE);
+    }
+    else {
+      // Retrieve the link element's attributes from form state.
+      $input = $form_state->get('link_element') ?: [];
+    }
+
+    $form['mailto'] = [
+      '#title' => t('Mailto'),
+      '#type' => 'checkbox',
+      '#default_value' => !empty($input['href']) && strpos($input['href'], 'mailto:') === 0,
+      '#group' => 'advanced',
+      '#attributes' => [
+        'class' => ['mailto-option'],
+      ],
+      '#attached' => [
+        'library' => ['os2web_hjemmeside/mailto_editor_link_option'],
+      ],
+    ];
+
   }
 }

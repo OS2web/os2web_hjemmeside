@@ -1,3 +1,7 @@
 chosen:
   js:
     js/chosen.js: {}
+
+mailto_editor_link_option:
+  js:
+    js/mailto_editor_link_option.js: {}
