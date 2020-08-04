@@ -10,7 +10,7 @@ langcode: da
 popup_agreed:
   value: "<h2>Tak fordi du accepterede cookies</h2>\r\n\r\n<p>Du kan nu skjule denne meddelelse eller lære mere om cookies.</p>\r\n"
   format: wysiwyg_tekst
-popup_agree_button_message: Accept
+popup_agree_button_message: 'Jeg accepterer'
 popup_agreed_enabled: false
 popup_bg_hex: ''
 popup_clicking_confirmation: false
@@ -24,7 +24,7 @@ popup_height: null
 popup_hide_agreed: false
 popup_hide_button_message: Skjul
 popup_info:
-  value: "<h2>Vi bruger cookies.</h2>\r\n\r\n<p>Nogle sikrer at sitet virker, andre samler statistik ind til forbedring af din brugeroplevelse. Din accept er gyldig i 100 dage.</p>\r\n"
+  value: "<p>Vi anvender cookies til at forbedre brugeroplevelsen og indhente anonym statistik til internt brug. Ved at klikke videre accepterer du vores og tredjeparters brug af cookies.</p>\r\n"
   format: wysiwyg_tekst
 mobile_popup_info:
   value: ''
@@ -35,17 +35,17 @@ popup_link: /gdpr
 popup_link_new_window: true
 popup_position: false
 fixed_top_position: true
-popup_text_hex: ''
-popup_width: ''
-use_bare_css: true
+popup_text_hex: ffffff
+popup_width: 100%
+use_bare_css: false
 disagree_do_not_show_popup: false
-reload_page: true
+reload_page: false
 cookie_name: ''
 exclude_uid_1: false
 better_support_for_screen_readers: false
 use_mobile_message: false
-method: opt_in
-disagree_button_label: 'Nej tak'
+method: default
+disagree_button_label: 'Nej, tak'
 disabled_javascripts: ''
 whitelisted_cookies: ''
 consent_storage_method: do_not_store
@@ -56,8 +56,8 @@ withdraw_action_button_label: 'Træk samtykke tilbage'
 withdraw_tab_button_label: 'Indstillinger for privatliv'
 withdraw_enabled: false
 cookie_categories: ''
-enable_save_preferences_button: true
-save_preferences_button_label: 'Save preferences'
+enable_save_preferences_button: false
+save_preferences_button_label: 'Jeg accepterer'
 accept_all_categories_button_label: 'Accept all cookies'
 fix_first_cookie_category: true
 select_all_categories_by_default: false

@@ -6,7 +6,7 @@ punctuation:
   backtick: 0
   comma: 0
   period: 0
-  hyphen: 0
+  hyphen: 1
   underscore: 0
   colon: 0
   semicolon: 0

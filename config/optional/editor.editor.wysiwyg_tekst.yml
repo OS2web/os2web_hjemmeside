@@ -16,7 +16,9 @@ settings:
           items:
             - Format
             - Bold
+            - Underline
             - Italic
+            - Strike
         -
           name: Links
           items:
@@ -27,6 +29,7 @@ settings:
           items:
             - BulletedList
             - NumberedList
+            - Table
         -
           name: Media
           items:
@@ -54,5 +57,5 @@ image_upload:
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: null
-    height: null
+    width: 2000
+    height: 2000
