@@ -5,7 +5,8 @@
     "keywords": [
     ],
     "require": {
-        "drupal/core": "*"
+        "drupal/core": "*",
+        "drupal/metatag": "*"
     },
     "license": "EUPL-1.2",
     "minimum-stability": "dev"
