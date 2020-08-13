@@ -34,6 +34,6 @@ function os2web_hjemmeside_install() {
  *
  * Install new required module textfield_counter.
  */
-function os2web_spotbox_update_8901() {
+function os2web_hjemmeside_update_8901() {
   \Drupal::service('module_installer')->install(['textfield_counter']);
 }
