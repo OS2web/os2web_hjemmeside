@@ -63,6 +63,7 @@ class Os2webMetatagFirehose extends MetatagFirehose {
   public static function defaultSettings() {
     return [
       'description_maxlength' => 0,
+      'description_required' => 0,
       'hide_basic_elements' => [
         'description' => FALSE,
         'abstract' => FALSE,
@@ -94,6 +95,12 @@ class Os2webMetatagFirehose extends MetatagFirehose {
       '#title' => $this->t('Description max length'),
       '#default_value' => $this->getSetting('description_maxlength'),
     ];
+
+    $element['description_required'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Description field required'),
+      '#default_value' => $this->getSetting('description_required'),
+    ];
     return $element;
   }
 
@@ -102,6 +109,17 @@ class Os2webMetatagFirehose extends MetatagFirehose {
    */
   public function settingsSummary() {
     $summary = parent::settingsSummary();
+    $hide_basic_elements = array_filter($this->getSetting('hide_basic_elements'));
+    if (!empty($hide_basic_elements)) {
+        $summary[] = $this->t('Hidden elements: @elements', ['@elements' => implode(', ', $hide_basic_elements)]);
+    }
+
+    $summary[] = 'Description metatag:';
+    if ($maxlength = $this->getSetting('description_maxlength')) {
+      $summary[] = $this->t('- max length: @description_maxlength', ['@description_maxlength' => $maxlength]);
+    }
+
+    $summary[] = $this->t('- required: @description_required', ['@description_required' => $this->getSetting('description_required') ? $this->t('Yes') : $this->t('No')] );
     return $summary;
   }
 
@@ -122,20 +140,24 @@ class Os2webMetatagFirehose extends MetatagFirehose {
       $element_description = &$element['basic']['description'];
       $position = 'after';
       $entity = $items->getEntity();
-      $keys = [$entity->getEntityTypeId(), 'metatag'];
-      $keys[] = $entity->id() ? $entity->id() : 0;
-      $key = implode('-', $keys);
+      $key = "{$entity->getEntityTypeId()}--{$entity->bundle()}--{$items->getFieldDefinition()->getName()}";
       $element_description['#textfield-maxlength'] = $maxlength;
       $element_description['#attributes']['class'][] = $key;
       $element_description['#attributes']['class'][] = 'textfield-counter-element';
-      $field_definition_id = "{$entity->getEntityTypeId()}--{$entity->bundle()}--{$items->getFieldDefinition()->getName()}";
-      $element_description['#attributes']['data-field-definition-id'] = $field_definition_id;
+      $element_description['#attributes']['data-field-definition-id'] = $key;
       $element_description['#attached']['library'][] = 'textfield_counter/counter';
       $element_description['#attached']['drupalSettings']['textfieldCounter'][$key]['key'][] = $key;
       $element_description['#attached']['drupalSettings']['textfieldCounter'][$key]['maxlength'] = (int) $maxlength;
       $element_description['#attached']['drupalSettings']['textfieldCounter'][$key]['counterPosition'] = $position;
       $element_description['#attached']['drupalSettings']['textfieldCounter'][$key]['textCountStatusMessage'] = $this->t('Maxlength: <span class="maxlength_count">@maxlength</span><br />Used: <span class="current_count">@current_length</span><br />Remaining: <span class="remaining_count">@remaining_count</span>');
       $element_description['#attached']['drupalSettings']['textfieldCounter'][$key]['countHTMLCharacters'] = FALSE;
+      $element_description['#attached']['drupalSettings']['textfieldCounter'][$key]['preventSubmit'] = TRUE;
+    }
+
+    if ($this->getSetting('description_required')) {
+      $element['basic']['description']['#required'] = TRUE;
+      $element['#open'] = TRUE;
+      $element['#required'] = TRUE;
     }
 
     return $element;
