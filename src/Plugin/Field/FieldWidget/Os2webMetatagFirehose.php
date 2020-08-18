@@ -111,7 +111,7 @@ class Os2webMetatagFirehose extends MetatagFirehose {
     $summary = parent::settingsSummary();
     $hide_basic_elements = array_filter($this->getSetting('hide_basic_elements'));
     if (!empty($hide_basic_elements)) {
-        $summary[] = $this->t('Hidden elements: @elements', ['@elements' => implode(', ', $hide_basic_elements)]);
+      $summary[] = $this->t('Hidden elements: @elements', ['@elements' => implode(', ', $hide_basic_elements)]);
     }
 
     $summary[] = 'Description metatag:';
@@ -119,7 +119,7 @@ class Os2webMetatagFirehose extends MetatagFirehose {
       $summary[] = $this->t('- max length: @description_maxlength', ['@description_maxlength' => $maxlength]);
     }
 
-    $summary[] = $this->t('- required: @description_required', ['@description_required' => $this->getSetting('description_required') ? $this->t('Yes') : $this->t('No')] );
+    $summary[] = $this->t('- required: @description_required', ['@description_required' => $this->getSetting('description_required') ? $this->t('Yes') : $this->t('No')]);
     return $summary;
   }
 
