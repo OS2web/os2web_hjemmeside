@@ -20,6 +20,14 @@ settings:
             - Italic
             - Strike
         -
+          name: Edit
+          items:
+            - Paste
+            - PasteText
+            - PasteFromWord
+            - Undo
+            - Redo
+        -
           name: Links
           items:
             - DrupalLink
