@@ -37,3 +37,10 @@ function os2web_hjemmeside_install() {
 function os2web_hjemmeside_update_8901() {
   \Drupal::service('module_installer')->install(['textfield_counter']);
 }
+
+/**
+ * Install new contrib module save_edit.
+ */
+function os2web_hjemmeside_update_8902() {
+  \Drupal::service('module_installer')->install(['save_edit']);
+}
