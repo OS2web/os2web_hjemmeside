@@ -21,7 +21,7 @@ function os2web_hjemmeside_read_in_new_config($config_name) {
 }
 
 /**
- * Implements hook_install.
+ * Implements hook_install().
  */
 function os2web_hjemmeside_install() {
   // Update admin/content view.
@@ -30,7 +30,7 @@ function os2web_hjemmeside_install() {
 }
 
 /**
- * Implements hook_update_N.
+ * Implements hook_update_N().
  *
  * Install new required module textfield_counter.
  */
@@ -43,4 +43,12 @@ function os2web_hjemmeside_update_8901() {
  */
 function os2web_hjemmeside_update_8902() {
   \Drupal::service('module_installer')->install(['save_edit']);
+}
+
+/**
+ * Add Editor and Webmaster roles.
+ */
+function os2web_hjemmeside_update_8903() {
+  os2web_hjemmeside_read_in_new_config('user.role.editor');
+  os2web_hjemmeside_read_in_new_config('user.role.webmaster');
 }
