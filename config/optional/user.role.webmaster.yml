@@ -46,6 +46,7 @@ permissions:
   - 'create media'
   - 'create os2web_hearings_hearing_case content'
   - 'create os2web_page content'
+  - 'create os2web_system_page content'
   - 'create url aliases'
   - 'delete all os2web contact revisions'
   - 'delete all os2web spotbox revisions'
