@@ -6,7 +6,17 @@
     ],
     "require": {
         "drupal/core": "*",
-        "drupal/metatag": "*"
+        "drupal/metatag": "*",
+        "drupal/easy_breadcrumb": "*",
+        "drupal/extlink": "*",
+        "drupal/editor_advanced_link": "*",
+        "drupal/ckeditor_iframe": "*",
+        "drupal/linkit": "*",
+        "drupal/pathauto": "*",
+        "drupal/chosen": "*",
+        "drupal/metatag": "*",
+        "drupal/textfield_counter": "*",
+        "drupal/save_edit": "*"
     },
     "license": "EUPL-1.2",
     "minimum-stability": "dev"
