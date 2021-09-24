@@ -28,6 +28,13 @@ settings:
             - Undo
             - Redo
         -
+          name: Alignment
+          items:
+            - JustifyCenter
+            - JustifyLeft
+            - JustifyRight
+            - JustifyBlock
+        -
           name: Links
           items:
             - DrupalLink
@@ -51,6 +58,7 @@ settings:
           name: Værktøjer
           items:
             - Source
+            - RemoveFormat
   plugins:
     stylescombo:
       styles: ''
