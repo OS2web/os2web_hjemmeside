@@ -3,7 +3,7 @@ type: module
 description: 'Main module that brings hjemmeside general configuration.'
 core: 8.x
 core_version_requirement: ^8 || ^9
-package: 'os2web'
+package: 'OS2Web'
 dependencies:
   - ckeditor
   - easy_breadcrumb
