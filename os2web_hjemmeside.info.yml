@@ -2,10 +2,10 @@ name: 'OS2Web Hjemmeside'
 type: module
 description: 'Main module that brings hjemmeside general configuration.'
 core: 8.x
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^8 || ^9 || ^10
 package: 'OS2Web'
 dependencies:
-  - ckeditor
+  - ckeditor5
   - easy_breadcrumb
   - extlink
   - editor_advanced_link
