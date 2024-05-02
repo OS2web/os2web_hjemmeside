@@ -31,7 +31,6 @@ permissions:
   - 'revert os2web_hearings_hearing_case revisions'
   - 'revert os2web_page revisions'
   - 'schedule publishing of nodes'
-  - 'translate os2web_page node'
   - 'update media'
   - 'use publish_content transition create_new_draft'
   - 'use publish_content transition publish'

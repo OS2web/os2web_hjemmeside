@@ -80,7 +80,6 @@ permissions:
   - 'translate any entity'
   - 'translate block_content'
   - 'translate os2web_contact'
-  - 'translate os2web_page node'
   - 'translate os2web_sektion taxonomy_term'
   - 'translate os2web_spotbox'
   - 'translate paragraph'
