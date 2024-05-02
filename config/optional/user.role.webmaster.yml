@@ -86,8 +86,6 @@ permissions:
   - 'update any media'
   - 'update content translations'
   - 'update media'
-  - 'use publish_content transition create_new_draft'
-  - 'use publish_content transition publish'
   - 'use search_api_autocomplete for os2web_search'
   - 'use text format wysiwyg_tekst'
   - 'view all media revisions'
