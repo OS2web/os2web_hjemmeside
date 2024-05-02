@@ -14,7 +14,8 @@ use Symfony\Component\Yaml\Yaml;
  *   Configuration name.
  */
 function os2web_hjemmeside_read_in_new_config($config_name) {
-  $path = drupal_get_path('module', 'os2web_hjemmeside');
+//  $path = drupal_get_path('module', 'os2web_hjemmeside');
+  $path = \Drupal::service('extension.list.module')->getPath('os2web_hjemmeside');
   /** @var \Drupal\Core\Config\StorageInterface $active_storage */
   $active_storage = \Drupal::service('config.storage');
   $active_storage->write($config_name, Yaml::parse(file_get_contents($path . '/config/optional/' . $config_name . '.yml')));
