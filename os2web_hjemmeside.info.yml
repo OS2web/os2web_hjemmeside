@@ -19,3 +19,7 @@ dependencies:
   - redirect
   - textfield_counter
   - save_edit
+  - menu_link_content
+  # os2web
+  - os2web_borgerdk
+
