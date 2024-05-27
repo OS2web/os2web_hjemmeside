@@ -15,6 +15,7 @@ permissions:
   - 'access toolbar'
   - 'administer menu'
   - 'administer redirects'
+  - 'administer blocks'
   - 'create media'
   - 'delete media'
   - 'edit own comments'
