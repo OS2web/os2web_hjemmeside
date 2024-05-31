@@ -2,10 +2,10 @@ langcode: da
 status: true
 dependencies:
   config:
-    - filter.format.wysiwyg_text
+    - filter.format.wysiwyg_tekst
   module:
     - ckeditor5
-format: wysiwyg_text
+format: wysiwyg_tekst
 editor: ckeditor5
 settings:
   toolbar:
