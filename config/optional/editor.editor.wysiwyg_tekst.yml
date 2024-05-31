@@ -1,12 +1,11 @@
-uuid: 22ed9985-7d87-400e-b821-b13449265a5a
 langcode: da
 status: true
 dependencies:
   config:
-    - filter.format.wysiwyg_tekst
+    - filter.format.wysiwyg_text
   module:
     - ckeditor5
-format: wysiwyg_tekst
+format: wysiwyg_text
 editor: ckeditor5
 settings:
   toolbar:
