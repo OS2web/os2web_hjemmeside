@@ -1,0 +1,11 @@
+uuid: 4716b44b-c340-4159-90ab-143209a6ceb0
+langcode: da
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.media_folders
+id: taxonomy_term.media_folders
+target_entity_type_id: taxonomy_term
+target_bundle: media_folders
+default_langcode: site_default
+language_alterable: false
