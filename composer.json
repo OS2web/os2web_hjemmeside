@@ -11,7 +11,7 @@
         "drupal/extlink": "^2.0",
         "drupal/editor_advanced_link": "2.x-dev@dev",
         "drupal/ckeditor_iframe": "^3.0@alpha",
-        "drupal/linkit": "^6.1",
+        "drupal/linkit": "^6.1 || ^7.0",
         "drupal/pathauto": "^1.5",
         "drupal/chosen": "^4.0",
         "drupal/textfield_counter": "^2.3",
