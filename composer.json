@@ -13,7 +13,7 @@
         "drupal/ckeditor_iframe": "^3.0@alpha",
         "drupal/linkit": "^6.1 || ^7.0",
         "drupal/pathauto": "^1.5",
-        "drupal/chosen": "^4.0",
+        "drupal/chosen": "^4.0 || ^5.0",
         "drupal/textfield_counter": "^2.3",
         "drupal/redirect": "^1.9",
         "drupal/save_edit": "^1.7"
