@@ -16,8 +16,7 @@ dependencies:
   - chosen
   - media
   - media_directories
-  - media_directories_editor
-  - media_directories_ui
+  - media_directories_browser
   - metatag
   - redirect
   - textfield_counter
