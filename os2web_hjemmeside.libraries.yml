@@ -5,3 +5,5 @@ chosen:
 mailto_editor_link_option:
   js:
     js/mailto_editor_link_option.js: {}
+  dependencies:
+    - core/once

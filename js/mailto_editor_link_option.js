@@ -1,4 +1,4 @@
-(function (Drupal, $) {
+(function (Drupal, $, once) {
 
   'use strict';
 
@@ -7,7 +7,7 @@
       var $href = $('.editor-link-dialog input[data-drupal-selector="edit-attributes-href"]');
       var $mailto = $('.editor-link-dialog details[data-drupal-selector="edit-advanced"] .mailto-option');
       // Update href value with mailto prefix.
-      $mailto.once('mailto_editor_link_option')
+      $(once('mailto_editor_link_option', $mailto.get()))
         .on('change', function () {
           var $value = $href.val().replace('mailto:', '');
           if (this.checked) {
@@ -15,7 +15,7 @@
           }
           $href.val($value);
       });
-      $href.once('mailto_editor_link_option')
+      $(once('mailto_editor_link_option', $href.get()))
         .on('keyup', function () {
           var $value = this.value.replace('mailto:', '');
           if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($value)) {
@@ -28,4 +28,4 @@
     }
   };
 
-}(Drupal, jQuery));
+}(Drupal, jQuery, once));
